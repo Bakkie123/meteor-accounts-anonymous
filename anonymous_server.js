@@ -1,7 +1,7 @@
 (function() {
   
   // handler to login anonymously
-  Meteor.accounts.registerLoginHandler(function(options) {
+  Accounts.registerLoginHandler(function(options) {
     if (!options.anonymous)
       return undefined; // don't handle
     
