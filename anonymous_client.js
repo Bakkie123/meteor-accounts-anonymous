@@ -3,7 +3,7 @@
     Meteor.call('login', {anonymous: true}, function(err, result) {
       if (err) 
         throw err
-      Accounts._makeClientLoggedIn(result.id, result.token);
+      Accounts.makeClientLoggedIn(result.id, result.token);
       fn && fn();
     });
   }
